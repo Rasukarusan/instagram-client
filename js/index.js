@@ -6,6 +6,7 @@ var progress = 0
  * ぶっこ抜くボタン押下時 
  */
 $('#submit').click(function() {
+    $('#result-view-progress').text('')
     var urls = $('#urls').val().split('\n').filter(function(v) { return v.match(/https:\/\/www\.instagram\.com/)})
     total = urls.length
     // exec(urls)
