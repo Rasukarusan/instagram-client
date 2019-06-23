@@ -22,7 +22,7 @@ $('#submit').click(function() {
 function pingToHeroku() {
     $.ajax({
         url : endPoint,
-        type:'POST',
+        type:'GET',
     })
 }
 
