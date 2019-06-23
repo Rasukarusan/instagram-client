@@ -2,6 +2,8 @@ var endPoint = 'https://nameless-sands-66548.herokuapp.com/instagram'
 var total = 0
 var progress = 0
 
+pingToHeroku()
+
 /**
  * ぶっこ抜くボタン押下時 
  */
@@ -12,6 +14,17 @@ $('#submit').click(function() {
     // exec(urls)
     urls.forEach(function(url) { exec([url]) })
 })
+
+/**
+ * sleep回避
+ * OPTIMIZE: とりあえず一番手軽な実装。
+ */
+function pingToHeroku() {
+    $.ajax({
+        url : endPoint,
+        type:'GET',
+    })
+}
 
 function exec(urls) {
     $('#result-view-title').text('取得中...')
