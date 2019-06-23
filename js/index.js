@@ -1,4 +1,4 @@
-var endPoint = './action.php'
+var endPoint = 'https://nameless-sands-66548.herokuapp.com/instagram'
 var total = 0
 var progress = 0
 
@@ -6,12 +6,6 @@ var progress = 0
  * ぶっこ抜くボタン押下時 
  */
 $('#submit').click(function() {
-    // Debug用。phpとgoを切り替える
-    var serverLang = getParam('lang') 
-    if(serverLang == 'go') {
-        endPoint = 'https://nameless-sands-66548.herokuapp.com/instagram'
-    }
-
     var urls = $('#urls').val().split('\n').filter(function(v) { return v.match(/https:\/\/www\.instagram\.com/)})
     total = urls.length
     // exec(urls)
