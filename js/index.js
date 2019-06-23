@@ -48,6 +48,7 @@ function initializeProgress() {
     total = 0
     progress = 0
     $('#result-view-progress').text('')
+    $('#result-view').empty()
 }
 
 /**
